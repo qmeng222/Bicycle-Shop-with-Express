@@ -4,6 +4,7 @@ const bicycles = require("./data/data.json");
 const app = express(); // create an Express application
 
 app.set("view engine", "ejs"); // set EJS (Embedded JavaScript) as the view engine for the Express app
+app.use(express.static("public")); // middleware that serves static files from "public" directory
 
 app.get("/", (req, res) => {
   // res.send(`<h1>Hello</h1>`);
