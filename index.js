@@ -3,15 +3,17 @@ const bicycles = require("./data/data.json");
 
 const app = express(); // create an Express application
 
+app.set("view engine", "ejs"); // set EJS (Embedded JavaScript) as the view engine for the Express app
+
 app.get("/", (req, res) => {
   // res.send(`<h1>Hello</h1>`);
-  return res.send(bicycles);
+  return res.render("bicycles"); // bicycles.ejs
 });
 
 app.get("/bicycle", (req, res) => {
   console.log(req.query); // { id: '3' }
   const bicycle = bicycles.find((b) => b.id === req.query.id);
-  return res.send(bicycle);
+  return res.render("overview"); // overview.ejs
 });
 
 const port = 3000;
