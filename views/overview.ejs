@@ -19,15 +19,18 @@
       </nav>
       <div class="singleBicycle">
         <div class="singleBicycle_img">
-          <img src="/images/0.png" alt="Hercules Roadeo A50" />
+          <img src="/images/<%=bicycle.image%>" alt="<%=bicycle.image%>" />
         </div>
         <div class="singleBicycle_info">
           <div class="singleBicycle_name">
-            <p>Hercules Roadeo A50</p>
+            <p><%=bicycle.name%></p>
           </div>
 
           <div class="singleBicycle_price">
-            <p>$1020.00</p>
+            <p>
+              $<%= bicycle.hasDiscount ? bicycle.originalPrice * (100 -
+              bicycle.discount) / 100 : bicycle.originalPrice %>
+            </p>
           </div>
 
           <div class="singleBicycle_desc">

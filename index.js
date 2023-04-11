@@ -12,9 +12,20 @@ app.get("/", (req, res) => {
 });
 
 app.get("/bicycle", (req, res) => {
-  console.log(req.query); // { id: '3' }
+  // console.log(req.query); // { id: '3' }
   const bicycle = bicycles.find((b) => b.id === req.query.id);
-  return res.render("overview"); // overview.ejs
+  console.log(bicycle);
+  // // {
+  // //   id: '5',
+  // //   name: 'Urban Terrain UT1000',
+  // //   hasDiscount: false,
+  // //   originalPrice: 1500,
+  // //   image: '5.png',
+  // //   star: 5
+  // // }
+  return res.render("overview", {
+    bicycle,
+  }); // overview.ejs
 });
 
 const port = 3000;
