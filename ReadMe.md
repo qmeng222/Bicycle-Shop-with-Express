@@ -2,7 +2,7 @@
 
 ## Overview:
 
-Get your bicycle shop up and running quickly with this customizable Node.js-based solution which allows users to browse through a catalog of bicycles with product descriptions, prices, and star ratings.
+Accelerate the launch of your bicycle shop with this customizable solution built on Node.js and Express.js. It offers an intuitive interface for users to browse a catalog of bicycles with detailed descriptions, pricing, and star ratings. Its flexibility enables it to be applied to a wide range of e-commerce businesses.
 
 ![Project Overview](/bicycle-shop-express.gif)
 
