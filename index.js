@@ -8,7 +8,10 @@ app.use(express.static("public")); // middleware that serves static files from "
 
 app.get("/", (req, res) => {
   // res.send(`<h1>Hello</h1>`);
-  return res.render("bicycles"); // bicycles.ejs
+  // bicycles.ejs as the view👇
+  return res.render("bicycles", {
+    bicycles,
+  });
 });
 
 app.get("/bicycle", (req, res) => {
@@ -23,9 +26,11 @@ app.get("/bicycle", (req, res) => {
   // //   image: '5.png',
   // //   star: 5
   // // }
+
+  // overview.ejs as the view👇
   return res.render("overview", {
     bicycle,
-  }); // overview.ejs
+  });
 });
 
 const port = 3000;
