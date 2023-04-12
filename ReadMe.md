@@ -8,7 +8,7 @@ Accelerate the launch of your bicycle shop with this customizable solution built
 
 <br>
 
-## URls:
+## URLs:
 
 - Bicycle catalog: http://localhost:3000/
 - Bicycle detail: http://localhost:3000/bicycle?id=1
